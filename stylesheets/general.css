@@ -1,0 +1,253 @@
+/* Variables générales */
+
+:root {
+    /* texte et arrière-plan */
+    --text: rgb(210, 210, 210);
+    --background: rgb(30, 30, 30);
+    /* couleur principale du site */
+    --main-color: 65, 74, 245;
+    /* couleurs des liens internes */
+    --inlink-hl: rgba(var(--main-color), 0.5);
+    --inlink-hl-hov: rgba(var(--main-color), 0.8);
+    /* couleur des liens externes */
+    --link: rgb(158, 177, 239);
+    /* citations */
+    --bquote: rgb(185, 185, 185);
+    /* diviseurs */
+    --hr-col: rgb(80, 80, 80);
+    --hr: 2px solid var(--hr-col);
+    /* couleurs du code */
+    --code: rgb(243, 101, 96);
+    --code-hl: rgb(40, 40, 40);
+}
+
+/* Général */
+
+html {
+    background-color: var(--background);
+}
+
+body {
+    font-family: "Inter";
+    color: var(--text);
+}
+
+/* Titres */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: normal;
+}
+
+h1 {
+    font-size: 2.6rem;
+    margin-top: 1.8rem;
+    font-weight: 600;
+    border-bottom: 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.3rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    border-bottom: var(--hr);
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.6rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.4rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+h6 {
+    font-size: 1.2rem;
+    margin-top: 1.1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+/* Listes */
+
+li {
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding-left: 0.2rem;
+}
+
+ul,
+ol {
+    padding-left: 0;
+}
+
+ul>li,
+ol>li {
+    margin-left: 1.5rem;
+}
+
+ul>li {
+    list-style-type: disc;
+}
+
+/* Citations */
+
+blockquote {
+    padding-left: 1rem;
+    font-style: italic;
+    color: var(--bquote);
+    margin: 0.6rem 0 0.6rem 0.6rem;
+    border-width: 0 0 0 0.2rem;
+    border-style: solid;
+    border-left-color: var(--bquote);
+    font-size: 103%;
+}
+
+/* Code */
+
+code {
+    color: var(--code);
+    background: var(--code-hl);
+    box-shadow: 3px 0 0 var(--code-hl), -3px 0 0 var(--code-hl);
+    padding: 3px 0;
+    border-radius: 3px;
+}
+
+pre>code {
+    background: none;
+    box-shadow: none;
+    color: var(--code);
+}
+
+/* Emphase */
+
+strong {
+    font-weight: 600;
+}
+
+em {
+    font-style: italic;
+}
+
+/* Liens externes */
+
+a:not([href^="http: //memes.sorbonne-universite.fr/"]) {
+    color: var(--link);
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+a:not([href^="http: //memes.sorbonne-universite.fr/"]):hover {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+/* Liens internes */
+
+a[href^="http: //memes.sorbonne-universite.fr/"] {
+    text-decoration: none;
+    color: var(--text);
+    background: var(--inlink-hl);
+    box-shadow: 3px 0 0 var(--inlink-hl), -3px 0 0 var(--inlink-hl);
+    padding: 2px 0;
+    border-radius: 3px;
+    transition: 0.1s;
+}
+
+a[href^="http: //memes.sorbonne-universite.fr/"]:after {
+    content: " ↗";
+}
+
+a[href^="http: //memes.sorbonne-universite.fr/"]:hover {
+    background: var(--inlink-hl-hov);
+    box-shadow: 3px 0 0 var(--inlink-hl-hov), -3px 0 0 var(--inlink-hl-hov);
+    text-decoration: none;
+}
+
+/* Encarts */
+
+aside {
+    padding: 0 0.8rem 0 0.8rem;
+    margin: 1.2rem;
+    background-color: rgba(var(--main-color), 0.3);
+    border-radius: 5px;
+    border: 1.5px solid rgba(var(--main-color), 0.8);
+}
+
+/* Diviseurs */
+
+hr {
+    border: 0;
+    border-top: var(--hr);
+}
+
+/* Tableaux */
+
+table {
+    margin: 1rem auto 1rem auto;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px var(--hr-col);
+    border-collapse: collapse;
+    border-style: hidden;
+    overflow: hidden;
+    font-size: 95%;
+    table-layout: auto;
+    max-width: 100%;
+
+}
+
+table td,
+table th {
+    border: var(--hr) !important;
+    padding: 0.7rem;
+}
+
+td {
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+th {
+    font-weight: 500;
+    background-color: var(--code-hl);
+}
+
+table tr:first-child th {
+    border-top: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: 0;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+    border-right: 0;
+}
