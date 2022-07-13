@@ -5,12 +5,12 @@
     --text: rgb(210, 210, 210);
     --background: rgb(30, 30, 30);
     /* couleur principale du site */
-    --main-color: 65, 74, 245;
+    --main-color: 65, 110, 245;
     /* couleurs des liens internes */
     --inlink-hl: rgba(var(--main-color), 0.5);
     --inlink-hl-hov: rgba(var(--main-color), 0.8);
     /* couleur des liens externes */
-    --link: rgb(158, 177, 239);
+    --link: rgb(158, 200, 245);
     /* citations */
     --bquote: rgb(185, 185, 185);
     /* diviseurs */
@@ -190,9 +190,9 @@ a[href^="http: //memes.sorbonne-universite.fr/"]:hover {
 aside {
     padding: 0 0.8rem 0 0.8rem;
     margin: 1.2rem;
-    background-color: rgba(var(--main-color), 0.3);
+    background-color: rgba(var(--main-color), 0.2);
     border-radius: 5px;
-    border: 1.5px solid rgba(var(--main-color), 0.8);
+    border: 1.5px solid rgba(var(--main-color), 0.7);
 }
 
 /* Diviseurs */
