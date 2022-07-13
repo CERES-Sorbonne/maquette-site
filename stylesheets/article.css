@@ -1,10 +1,30 @@
-body {
-    margin: 4rem auto 6rem auto;
-    max-width: 60rem;
+:root {
+    --toc-width: 20rem;
+    --toc-padding: 1rem;
+    --ext-margin: 3%;
 }
 
-main {
-    margin: 0 5rem 0 5rem;
+/* Article */
+
+#article-container {
+    width: auto;
+    margin-top: 0;
+    margin-right: calc(var(--ext-margin) + var(--toc-width) + 2 * var(--toc-padding) + 3rem);
+    margin-bottom: 0;
+    margin-left: var(--ext-margin);
+}
+
+/* Table des matières */
+
+#toc-container {
+    position: fixed;
+    right: var(--ext-margin);
+    width: var(--toc-width);
+    background-color: var(--background);
+    border: 2px solid var(--hr-col);
+    border-radius: 5px;
+    padding: 0 var(--toc-padding) 0 var(--toc-padding);
+    font-size: 90%;
 }
 
 /* Images */
@@ -15,4 +35,22 @@ img {
     display: block;
     margin: 1rem auto 1rem auto;
     border-radius: 2px;
+}
+
+/* Tags */
+
+#tags-container {
+    border-top: var(--hr);
+    border-bottom: var(--hr);
+    padding: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    align-content: center;
+}
+
+#tags-container:before {
+    content: "Tags :"
 }
