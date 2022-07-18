@@ -1,0 +1,8 @@
+footer {
+    border-top: var(--hr);
+    width: 85vw;
+    margin: 5rem auto 1rem auto;
+    padding: 1rem;
+    clear: both;
+    text-align: center;
+}
