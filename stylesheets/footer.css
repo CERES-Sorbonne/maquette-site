@@ -1,8 +1,10 @@
 footer {
+    position: relative;
+    top: 7rem;
     border-top: var(--hr);
     width: 85vw;
-    margin: 5rem auto 1rem auto;
-    padding: 1rem;
+    margin: 0 auto 0 auto;
+    padding: 1rem 1rem 2rem 1rem;
     clear: both;
     text-align: center;
 }

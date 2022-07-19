@@ -1,0 +1,41 @@
+main>header {
+    margin: auto;
+}
+
+#landing-image {
+    width: 100vw;
+    object-fit: cover;
+    height: 50vh;
+}
+
+h1#landing-title {
+    position: relative;
+    top: -5rem;
+    font-weight: 400;
+    font-size: 7rem;
+    margin: 0 0 0 4rem;
+    text-align: left;
+    text-shadow: var(--background) 0 0 20px;
+}
+
+#landing-blocks-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 2rem 0 2rem;
+    gap: 2rem;
+}
+
+.landing-block {
+    flex: 1 1 20rem;
+    max-width: 45rem;
+}
+
+img.landing-block {
+    object-fit: cover;
+}
+
+#landing-cards-title {
+    margin: 7rem auto 0 auto;
+    max-width: 45rem;
+}
