@@ -29,11 +29,13 @@
     padding: 0 var(--toc-padding) 0 var(--toc-padding);
     list-style: none;
     color: var(--disabled);
+    z-index: 1;
 }
 
 #toc-container>nav>ul {
     max-height: calc(85vh - 12rem);
     overflow: scroll;
+    margin: 0.3rem 0 1rem 0;
 }
 
 #toc-container a {
@@ -51,6 +53,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    line-height: 1.3;
 }
 
 #toc-container>nav>ul>li {
@@ -58,7 +61,7 @@
 }
 
 #toc-container>nav>ul>ul>li {
-    margin: 0.4rem 0 0.4rem 1rem;
+    margin: 0.3rem 0 0.3rem 1rem;
     font-size: 90%;
 }
 
@@ -75,7 +78,7 @@
     align-items: center;
     align-content: center;
     width: 90%;
-    margin: auto;
+    margin: 2rem auto 2rem auto;
 }
 
 #tags-container:before {

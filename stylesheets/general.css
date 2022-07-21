@@ -1,26 +1,45 @@
 /* Variables générales */
 
+@import url(https://rsms.me/inter/inter.css);
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
 :root {
-    /* texte et arrière-plan */
+    /* Texte et arrière-plan */
     --text: rgb(210, 210, 210);
     --background: rgb(20, 20, 20);
     --light-background: rgb(40, 40, 40);
-    /* couleur principale*/
-    --main: 130, 190, 255;
+
+    /* Couleur de mise en exergue du site */
+    /* --main: rgb(130, 190, 255); */
+    --main-red: 130;
+    --main-green: 190;
+    --main-blue: 255;
+    --main: var(--main-red), var(--main-green), var(--main-blue);
     --main-color: rgb(var(--main));
     --disabled: rgb(170, 170, 170);
-    /* citations */
-    --bquote: rgb(185, 185, 185);
-    /* diviseurs */
+
+    /* Diviseurs */
     --hr-col: rgb(80, 80, 80);
     --hr: 2px solid var(--hr-col);
-    /* couleurs du code */
+
+    /* Citations */
+    --bquote: rgb(190, 190, 190);
+    /* --bquote: rgb(min(calc(var(--main-red) / 2 + 120), 235),
+                min(calc(var(--main-green) / 2 + 120), 235),
+                min(calc(var(--main-blue) / 2 + 120), 235)); */
+
+    /* Code */
     --code: rgb(243, 101, 96);
-    --code-hl: rgb(40, 40, 40);
-    /* cartes */
+
+    /* Cartes */
     --in-card-margin: 0.6rem;
     --card-padding: 1rem;
     --card-border-radius: 6px;
+}
+
+::selection {
+    color: var(--background);
+    background: rgba(var(--main), 0.8);
 }
 
 /* Général */
@@ -32,14 +51,9 @@ html {
 }
 
 body {
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     color: var(--text);
     margin: 0;
-}
-
-::selection {
-    color: var(--background);
-    background: rgba(var(--main), 0.8);
 }
 
 /* Titres */
@@ -55,16 +69,14 @@ h6 {
 
 h1 {
     font-size: 2.6rem;
-    margin-top: 1.8rem;
+    margin: 1.8rem 0 1rem 0;
     font-weight: 600;
-    border-bottom: 0;
     text-align: center;
 }
 
 h2 {
     font-size: 2.3rem;
-    margin-top: 1.6rem;
-    margin-bottom: 0.8rem;
+    margin: 1.6rem 0 0.8rem 0;
     font-weight: 400;
     border-bottom: var(--hr);
     padding-bottom: 0.3rem;
@@ -72,45 +84,41 @@ h2 {
 
 h3 {
     font-size: 1.8rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
+    margin: 1.5rem 0 0.8rem 0;
     font-weight: 500;
 }
 
 h4 {
     font-size: 1.6rem;
-    margin-top: 1.4rem;
-    margin-bottom: 0.8rem;
+    margin: 1.4rem 0 0.8rem 0;
     font-weight: 500;
 }
 
 h5 {
     font-size: 1.4rem;
-    margin-top: 1.3rem;
-    margin-bottom: 0.8rem;
+    margin: 1.3rem 0 0.8rem 0;
     font-weight: 500;
     text-decoration: underline;
 }
 
 h6 {
     font-size: 1.2rem;
-    margin-top: 1.1rem;
-    margin-bottom: 0.7rem;
+    margin: 1.1rem 0 0.7rem 0;
     font-weight: 500;
 }
 
 /* Paragraphes */
 
-p {
-    line-height: 1.3;
+p,
+li {
+    margin: 0.6rem 0;
+    line-height: 1.4;
 }
 
 /* Listes */
 
 li {
     position: relative;
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
     padding-left: 0.2rem;
 }
 
@@ -130,24 +138,43 @@ ul>li {
 
 /* Citations */
 
+blockquote::before {
+    position: relative;
+    display: block;
+    content: '“';
+    font-size: 6rem;
+    left: -3.5rem;
+    height: 0px;
+    width: 0px;
+}
+
 blockquote {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     color: var(--bquote);
-    margin: 0.6rem 0 0.6rem 0.6rem;
-    border-width: 0 0 0 0.2rem;
-    border-style: solid;
-    border-left-color: var(--bquote);
-    font-size: 103%;
+    margin: 0 0 1rem 2rem;
+    font-weight: 300;
+    font-size: 110%;
+}
+
+blockquote:first-child {
+    color: red !important;
 }
 
 /* Code */
 
 code {
+    font-family: 'Fira Code', monospace;
     color: var(--code);
-    background: var(--code-hl);
-    box-shadow: 3px 0 0 var(--code-hl), -3px 0 0 var(--code-hl);
+    background: var(--light-background);
+    box-shadow: 3px 0 0 var(--light-background), -3px 0 0 var(--light-background);
     padding: 3px 0;
     border-radius: 3px;
+}
+
+pre {
+    background: var(--light-background);
+    border-radius: 4px;
+    padding: 1rem;
 }
 
 pre>code {
@@ -174,33 +201,33 @@ a:not([href^="http://memes.sorbonne-universite.fr/"]) {
     transition: 0.1s;
 }
 
-a:not([href^="http: //memes.sorbonne-universite.fr/"]):hover {
+a:not([href^="http://memes.sorbonne-universite.fr/"]):hover {
     color: var(--main-color);
     text-decoration: underline;
 }
 
-/* Liens internes */
+/* Liens internes au site insérés dans le texte */
 
-a:not(.tag, .small-tag, .div-link, .pagenum-button, .pagenum-arrow)[href^="http://memes.sorbonne-universite.fr"] {
+a:not(.tag, .small-tag, .card-link, .button, .arrow, #header-logo, .header-link)[href^="http://memes.sorbonne-universite.fr"] {
     text-decoration: none;
     color: var(--main-color);
-    padding: 2px 0;
+    background: rgba(var(--main), 0.1);
+    box-shadow: 3px 0 0 rgba(var(--main), 0.1), -3px 0 0 rgba(var(--main), 0.1);
     border-radius: 3px;
     transition: 0.1s;
 }
 
-a:not(.tag, .small-tag, .div-link, .pagenum-button, .pagenum-arrow)[href^="http://memes.sorbonne-universite.fr"]:after {
+a:not(.tag, .small-tag, .card-link, .button, .arrow, #header-logo, .header-link)[href^="http://memes.sorbonne-universite.fr"]:after {
     content: " ↗";
 }
 
-a:not(.tag, .small-tag, .div-link, .pagenum-button, .pagenum-arrow)[href^="http://memes.sorbonne-universite.fr"]:hover {
-    background: var(--main-color);
-    box-shadow: 3px 0 0 var(--main-color), -3px 0 0 var(--main-color);
-    color: var(--background);
+a:not(.tag, .small-tag, .card-link, .button, .arrow, #header-logo, .header-link)[href^="http://memes.sorbonne-universite.fr"]:hover {
     text-decoration: none;
+    background: rgba(var(--main), 0.3);
+    box-shadow: 3px 0 0 rgba(var(--main), 0.3), -3px 0 0 rgba(var(--main), 0.3);
 }
 
-/* Liens de tags */
+/* Tags */
 
 .tag,
 .small-tag {
@@ -277,7 +304,7 @@ td {
 
 th {
     font-weight: 500;
-    background-color: var(--code-hl);
+    background-color: var(--light-background);
 }
 
 table tr:first-child th {
@@ -302,7 +329,7 @@ table tr th:last-child {
 
 #cards-container {
     max-width: 70rem;
-    margin: 3rem auto 3rem auto;
+    margin: 0 auto 3rem auto;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -322,7 +349,7 @@ table tr th:last-child {
     transition: 0.1s;
 }
 
-.div-link {
+.card-link {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -383,7 +410,7 @@ table tr th:last-child {
 
 /* Boutons de navigation */
 
-#pagenum-container {
+#buttons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -393,36 +420,37 @@ table tr th:last-child {
     margin: 0 auto 0 auto;
 }
 
-.pagenum-button,
-.pagenum-arrow {
+.button,
+.arrow {
     display: block;
+    text-align: center;
     border-radius: 6px;
     margin: 0;
-    transition: 0s;
+    transition: 0.1s;
     text-decoration: none !important;
     color: var(--main-color);
     font-weight: 500;
 }
 
-.pagenum-button:hover,
-.pagenum-arrow:not(.disabled):hover {
+.button:hover,
+.arrow:not(.disabled):hover {
     background-color: rgba(var(--main), 0.3);
 }
 
-.pagenum-button {
+.button {
     padding: 0.4rem 0.7rem 0.4rem 0.7rem;
     border: 2px solid rgba(var(--main), 0.8);
 }
 
-.pagenum-button.active {
+.button.active {
     background-color: var(--main-color);
     color: var(--background) !important;
 }
 
-.pagenum-arrow {
+.arrow {
     padding: 0.5rem 0.7rem 0.3rem 0.7rem;
 }
 
-.pagenum-arrow.disabled {
+.arrow.disabled {
     color: var(--disabled) !important;
 }

@@ -2,9 +2,28 @@ footer {
     position: relative;
     top: 7rem;
     border-top: var(--hr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     width: 85vw;
     margin: 0 auto 0 auto;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1.5rem 1rem 3rem 1rem;
     clear: both;
-    text-align: center;
+    background-color: var(--background);
+    z-index: 2;
+}
+
+.footer-block {
+    flex: 1 1 25rem;
+    max-width: 35rem;
+    width: 100%;
+}
+
+footer .logo {
+    display: block;
+    margin: auto;
+    color: var(--main-color);
+    max-width: 15rem;
+    max-height: 15rem;
 }
