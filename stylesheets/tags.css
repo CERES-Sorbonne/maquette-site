@@ -1,0 +1,44 @@
+#tags-panel {
+    width: 20rem;
+    padding: 1rem;
+    background: var(--background);
+    border-right: var(--hr);
+
+}
+
+#tags-panel-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#tags-panel>hr {
+    margin: 1rem 0 0 0;
+}
+
+#tags-panel-tree {
+    height: 70vh;
+    padding: 1rem 0;
+    margin: 0;
+    overflow: scroll;
+}
+
+#tags-panel-tree,
+.tag-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tag-list {
+    margin-left: 3rem;
+}
+
+#tags-panel-tree .small-tag {
+    color: var(--disabled);
+    border-color: var(--disabled);
+}
+
+#tags-panel-tree .small-tag:hover {
+    border-color: var(--main-color);
+}

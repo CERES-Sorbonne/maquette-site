@@ -18,9 +18,10 @@
     --main-color: rgb(var(--main));
     --disabled: rgb(170, 170, 170);
 
-    /* Diviseurs */
+    /* Diviseurs et contours */
     --hr-col: rgb(80, 80, 80);
     --hr: 2px solid var(--hr-col);
+    --hr-main: 2px solid rgba(var(--main), 0.8);
 
     /* Citations */
     --bquote: rgb(190, 190, 190);
@@ -40,6 +41,12 @@
 ::selection {
     color: var(--background);
     background: rgba(var(--main), 0.8);
+}
+
+*:focus {
+    outline: none;
+    border-radius: 3px;
+    border: var(--hr-main) !important;
 }
 
 /* Général */
@@ -232,6 +239,7 @@ a:not(.tag, .small-tag, .card-link, .button, .arrow, #header-logo, .header-link)
 .tag,
 .small-tag {
     display: block;
+    width: fit-content;
     border-radius: 100px;
     margin: 0;
     transition: 0.05s;
@@ -453,4 +461,16 @@ table tr th:last-child {
 
 .arrow.disabled {
     color: var(--disabled) !important;
+}
+
+/* Champs de texte */
+input {
+    width: calc(100% - 1rem - 4px);
+    background: var(--background);
+    border: var(--hr);
+    color: var(--text);
+    font-size: 1rem;
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin: 1rem 0 1rem 0;
 }

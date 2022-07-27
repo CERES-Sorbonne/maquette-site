@@ -22,7 +22,7 @@ footer {
 
 footer .logo {
     display: block;
-    margin: auto;
+    margin: 1.5rem auto 0 auto;
     color: var(--main-color);
     max-width: 15rem;
     max-height: 15rem;
