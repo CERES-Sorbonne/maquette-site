@@ -244,9 +244,11 @@ a:not(.tag, .small-tag, .card-link, .button, .arrow, #header-logo, .header-link)
     margin: 0;
     transition: 0.05s;
     text-decoration: none;
+    text-align: center;
     color: var(--main-color);
     font-weight: 500;
     border: 2px solid rgba(var(--main), 0.8);
+    background: var(--background);
 }
 
 .tag:hover,

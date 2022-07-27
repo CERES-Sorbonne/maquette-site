@@ -1,3 +1,5 @@
+/* Panneau */
+
 #tags-panel {
     width: 20rem;
     padding: 1rem;
@@ -6,10 +8,11 @@
 
 }
 
+/* Blocs flexbox du panneau */
+
 #tags-panel-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
+    font-size: 95% !important;
 }
 
 #tags-panel>hr {
@@ -23,22 +26,72 @@
     overflow: scroll;
 }
 
-#tags-panel-tree,
-.tag-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.tag-list {
-    margin-left: 3rem;
-}
+/* Tags du panneau */
 
 #tags-panel-tree .small-tag {
     color: var(--disabled);
     border-color: var(--disabled);
+    margin-top: 0.5rem;
 }
 
 #tags-panel-tree .small-tag:hover {
     border-color: var(--main-color);
+}
+
+/* Listes de tags */
+
+#tags-panel-tree,
+.tag-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-list {
+    position: relative;
+    margin: 0 0 1rem 2rem;
+    padding: 0 0 0 1rem;
+    z-index: 1;
+    box-shadow: -2px 0 0 var(--hr-col);
+}
+
+.tag-list a {
+    position: relative;
+}
+
+/* Arborescence */
+
+.tag-list a::before {
+    /* balises svg encodées grâce à https://yoksel.github.io/url-encoder/ */
+    content: url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='40' %3E%3Cpath d='M 0 40 H 20' style='fill:none;stroke:rgb(80, 80, 80);stroke-width:4;' /%3E%3C/svg%3E");
+    position: absolute;
+    display: block;
+    left: -1.2rem;
+    top: -1.7rem;
+    height: 0px;
+    width: 0px;
+    z-index: -1;
+}
+
+/* Tags parents */
+
+.parent-tag-container {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.parent-arrow::after {
+    content: "▶︎";
+}
+
+.parent-arrow {
+    color: var(--hr-col);
+    font-size: 80%;
+    transform: rotate(90deg);
+    transition: 0.1s;
+}
+
+.parent-arrow:hover {
+    color: var(--disabled);
+    cursor: pointer;
 }
