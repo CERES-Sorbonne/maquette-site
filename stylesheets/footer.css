@@ -10,7 +10,7 @@ footer {
     margin: 0 auto 0 auto;
     padding: 1.5rem 1rem 3rem 1rem;
     clear: both;
-    background-color: var(--background);
+    background-color: var(--background-color);
     z-index: 2;
 }
 

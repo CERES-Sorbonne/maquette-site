@@ -33,7 +33,26 @@ function select_tag(tag) {
                 if (tag.classList.contains("selected")) { change_tag_status(tag) }
             });
         }
+    }
+}
 
+function show_panel(arrow) {
+    panel = document.getElementById("tags-panel-container");
+    elements_to_hide = [document.getElementById("tags-panel-text"),
+    document.getElementById("tags-panel-tree"),
+    document.getElementById("title-button-container").getElementsByTagName('p')[0],
+    panel.getElementsByTagName('hr')[0]
+    ]
 
+    if (!(arrow.innerHTML === "←")) {
+        panel.style.left = "0";
+        panel.style.paddingRight = "1rem";
+        elements_to_hide.forEach(element => element.style.visibility = "visible");
+        arrow.innerHTML = "←";
+    } else {
+        panel.style.left = "-18rem";
+        panel.style.paddingRight = "0.5rem";
+        elements_to_hide.forEach(element => element.style.visibility = "hidden");
+        arrow.innerHTML = "→";
     }
 }

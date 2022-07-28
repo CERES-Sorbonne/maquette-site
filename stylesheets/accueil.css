@@ -3,7 +3,7 @@ main>header {
 }
 
 #landing-image {
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
     height: 50vh;
 }
@@ -16,9 +16,9 @@ h1#landing-title {
     margin: 0 0 0 calc(1rem + 2.5vw);
     text-align: left;
     line-height: 0.8;
-    text-shadow: var(--background) 0 0 4rem,
-        var(--background) 0 0 4rem,
-        var(--background) 0 0 4rem;
+    text-shadow: var(--background-color) 0 0 4rem,
+        var(--background-color) 0 0 4rem,
+        var(--background-color) 0 0 4rem;
 }
 
 #landing-blocks-container {

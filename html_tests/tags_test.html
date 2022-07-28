@@ -10,69 +10,75 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<nav id="tags-panel">
-    <div id="tags-panel-text">
-        <p><strong>Recherche de contenus par concepts</strong></p>
-        <p>Cliquez sur les concepts pour les inclure dans la recherche, cliquez sur les flèches pour afficher les
-            sous-concepts</p>
-        <input type="text" placeholder="Recherche dans le texte">
-        <a class="button">Lancer la recherche -></a>
-    </div>
-    <hr>
-    <div id="tags-panel-tree">
-        <div class="parent-tag-container">
-            <a class="small-tag" onclick="select_tag(this)">Grocery</a>
-            <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
+<div id="tags-panel-container">
+    <nav id="tags-panel">
+        <div id="title-button-container">
+            <p><strong>Recherche de contenus par concepts</strong></p>
+            <a class="arrow" onclick="show_panel(this)">
+                -> </a>
         </div>
-        <div class="tag-list">
-            <a class="small-tag" onclick="select_tag(this)">Pie</a>
-            <a class="small-tag" onclick="select_tag(this)">Method</a>
-            <a class="small-tag" onclick="select_tag(this)">Teacher</a>
+        <div id="tags-panel-text">
+            <p>Cliquez sur les concepts pour les inclure dans la recherche, cliquez sur les flèches pour afficher les
+                sous-concepts</p>
+            <input type="text" placeholder="Recherche dans le texte">
+            <a class="button">Lancer la recherche -></a>
         </div>
-        <div class="parent-tag-container">
-            <a class="small-tag" onclick="select_tag(this)">Climate</a>
-            <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
-        </div>
-        <div class="tag-list">
-            <a class="small-tag" onclick="select_tag(this)">Industry</a>
-            <a class="small-tag" onclick="select_tag(this)">Obligation</a>
-            <a class="small-tag" onclick="select_tag(this)">Psychology</a>
-            <a class="small-tag" onclick="select_tag(this)">Device</a>
-        </div>
-        <div class="parent-tag-container">
-            <a class="small-tag" onclick="select_tag(this)">Judgment</a>
-            <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
-        </div>
-        <div class="tag-list">
-            <a class="small-tag" onclick="select_tag(this)">Growth</a>
-            <a class="small-tag" onclick="select_tag(this)">Addition</a>
-            <a class="small-tag" onclick="select_tag(this)">Concept</a>
-        </div>
-        <div class="parent-tag-container">
-            <a class="small-tag" onclick="select_tag(this)">Candidate</a>
-            <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
-        </div>
-        <div class="tag-list">
+        <hr>
+        <div id="tags-panel-tree">
             <div class="parent-tag-container">
-                <a class="small-tag" onclick="select_tag(this)">River of fluid information mechanics data mining</a>
+                <a class="small-tag" onclick="select_tag(this)">Grocery</a>
                 <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
             </div>
             <div class="tag-list">
-                <a class="small-tag" onclick="select_tag(this)">Response</a>
-                <a class="small-tag" onclick="select_tag(this)">Hotel</a>
+                <a class="small-tag" onclick="select_tag(this)">Pie</a>
+                <a class="small-tag" onclick="select_tag(this)">Method</a>
+                <a class="small-tag" onclick="select_tag(this)">Teacher</a>
             </div>
-            <a class="small-tag" onclick="select_tag(this)">Gene</a>
             <div class="parent-tag-container">
-                <a class="small-tag" onclick="select_tag(this)">Information</a>
+                <a class="small-tag" onclick="select_tag(this)">Climate</a>
                 <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
             </div>
             <div class="tag-list">
-                <a class="small-tag" onclick="select_tag(this)">Variation</a>
-                <a class="small-tag" onclick="select_tag(this)">Presentation</a>
-                <a class="small-tag" onclick="select_tag(this)">Computer</a>
+                <a class="small-tag" onclick="select_tag(this)">Industry</a>
+                <a class="small-tag" onclick="select_tag(this)">Obligation</a>
+                <a class="small-tag" onclick="select_tag(this)">Psychology</a>
+                <a class="small-tag" onclick="select_tag(this)">Device</a>
+            </div>
+            <div class="parent-tag-container">
+                <a class="small-tag" onclick="select_tag(this)">Judgment</a>
+                <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
+            </div>
+            <div class="tag-list">
+                <a class="small-tag" onclick="select_tag(this)">Growth</a>
+                <a class="small-tag" onclick="select_tag(this)">Addition</a>
+                <a class="small-tag" onclick="select_tag(this)">Concept</a>
+            </div>
+            <div class="parent-tag-container">
+                <a class="small-tag" onclick="select_tag(this)">Candidate</a>
+                <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
+            </div>
+            <div class="tag-list">
+                <div class="parent-tag-container">
+                    <a class="small-tag" onclick="select_tag(this)">River of fluid information mechanics data mining</a>
+                    <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
+                </div>
+                <div class="tag-list">
+                    <a class="small-tag" onclick="select_tag(this)">Response</a>
+                    <a class="small-tag" onclick="select_tag(this)">Hotel</a>
+                </div>
+                <a class="small-tag" onclick="select_tag(this)">Gene</a>
+                <div class="parent-tag-container">
+                    <a class="small-tag" onclick="select_tag(this)">Information</a>
+                    <div class="parent-arrow" onclick="display_subconcepts(this)"></div>
+                </div>
+                <div class="tag-list">
+                    <a class="small-tag" onclick="select_tag(this)">Variation</a>
+                    <a class="small-tag" onclick="select_tag(this)">Presentation</a>
+                    <a class="small-tag" onclick="select_tag(this)">Computer</a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
 
 </html>

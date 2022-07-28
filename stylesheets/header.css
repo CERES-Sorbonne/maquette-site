@@ -6,7 +6,7 @@
     align-items: center;
     align-content: center;
     padding: 0.6rem calc(2% + 0.6rem) 0.8rem calc(2% + 0.6rem);
-    background-color: var(--background);
+    background-color: var(--background-color);
     z-index: 1;
 }
 

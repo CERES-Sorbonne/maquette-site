@@ -23,12 +23,12 @@
     right: var(--ext-margin);
     width: var(--toc-width);
     margin-top: 1rem;
-    background-color: var(--background);
-    border: 2px solid var(--hr-col);
+    background-color: var(--background-color);
+    border: 2px solid var(--hr-color);
     border-radius: 5px;
     padding: 0 var(--toc-padding) 0 var(--toc-padding);
     list-style: none;
-    color: var(--disabled);
+    color: var(--disabled-color);
     z-index: 1;
 }
 
@@ -41,7 +41,7 @@
 #toc-container a {
     transition: 0s;
     font-size: 95%;
-    color: var(--disabled);
+    color: var(--disabled-color);
 }
 
 #toc-container a:hover {
