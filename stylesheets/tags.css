@@ -84,16 +84,14 @@
 }
 
 #tags-panel-tree .small-tag:hover {
-    border-color: var(--main-color);
+    border-color: rgba(var(--main), 0.6) !important;
+    background-color: var(--background-color);
+    color: rgba(var(--main), 0.9) !important;
 }
 
 #tags-panel-tree .small-tag.selected {
     color: var(--main-color) !important;
-    border-color: rgba(var(--main), 0.8) !important;
-}
-
-#tags-panel-tree .small-tag.selected:hover {
-    color: var(--background-color) !important;
+    border-color: var(--main-color) !important;
 }
 
 /* Listes de tags */
