@@ -124,7 +124,7 @@ only screen and (hover: none) and (pointer: coarse) {
     position: absolute;
     display: block;
     left: -1.2rem;
-    top: 1px;
+    top: 0.07;
     z-index: -1;
 }
 
