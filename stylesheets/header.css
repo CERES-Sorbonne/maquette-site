@@ -14,7 +14,6 @@
     display: block;
     color: var(--main-color);
     text-decoration: none;
-    transition: 0.1s;
     white-space: nowrap;
 }
 
@@ -37,7 +36,7 @@
 
 .header-div-v {
     margin: 0;
-    height: 20px;
+    height: 1.4rem;
     border-left: var(--hr);
 }
 

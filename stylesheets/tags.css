@@ -22,7 +22,8 @@
 
 /* Breakpoints */
 
-@media (max-width: 32rem) {
+@media (max-width: 32rem),
+only screen and (hover: none) and (pointer: coarse) {
     #tags-panel-container {
         display: none;
     }

@@ -67,7 +67,7 @@ html {
 
     /* Taille de typo pour téléphone */
     html {
-        font-size: calc(17px + 0.2vw);
+        font-size: 34px;
     }
 }
 
