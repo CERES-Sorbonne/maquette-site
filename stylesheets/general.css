@@ -65,12 +65,11 @@ html {
     scroll-behavior: smooth;
 }
 
-/* @media only screen and (hover: none) and (pointer: coarse) */
-@media (max-width:480px) {
+@media only screen and (hover: none) and (pointer: coarse) {
 
     /* Taille de typo pour téléphone */
     html {
-        font-size: 3.8vw;
+        font-size: 3.5vw;
     }
 }
 
@@ -172,8 +171,10 @@ blockquote::before {
     content: '“';
     font-size: 6rem;
     left: -3.5rem;
-    height: 0px;
-    width: 0px;
+    -webkit-text-stroke: 0.1rem var(--bquote);
+    color: var(--background-color);
+    height: 0;
+    width: 0;
 }
 
 blockquote {
@@ -311,7 +312,7 @@ hr {
 table {
     margin: 1rem auto 1rem auto;
     border-radius: var(--border-width);
-    box-shadow: 0 0 0 0.07rem var(--hr-color);
+    box-shadow: 0 0 0 0.1rem var(--hr-color);
     border-collapse: collapse;
     border-style: hidden;
     overflow: hidden;
@@ -410,7 +411,7 @@ table tr th:last-child {
 
 .card>img {
     width: calc(100% + 2 * var(--card-padding));
-    margin-left: calc(0px - var(--card-padding));
+    margin-left: calc(0rem - var(--card-padding));
     object-fit: cover;
     height: 13rem;
     border-radius: calc(var(--card-border-radius) - var(--border-width)) calc(var(--card-border-radius) - var(--border-width)) 0 0;
