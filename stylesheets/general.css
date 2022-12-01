@@ -27,6 +27,7 @@
 
     /* Diviseurs et contours */
     --hr-color: rgb(80, 80, 80);
+    --light-hr-color: rgb(35, 35, 35);
     --hr: var(--border-width) solid var(--hr-color);
     --hr-main: var(--border-width) solid rgba(var(--main), 0.8);
 

@@ -1,0 +1,34 @@
+main {
+    margin: auto;
+    width: 75rem;
+}
+
+#presentation-blocks-container {
+    column-count: 2;
+    column-gap: 5rem;
+}
+
+.presentation-block {
+    display: inline-block;
+    width: 100%;
+    margin: 0rem 0rem 1.5rem 0rem;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    border: 2px solid var(--light-hr-color);
+    border-radius: 0.4rem;
+}
+
+.presentation-block>img {
+    max-width: 100%;
+    max-height: 40vh;
+    margin: auto;
+}
+
+#last-posts-wrapper {
+    margin: 7rem auto 0 auto;
+    max-width: 70rem;
+}
+
+#last-posts-wrapper>h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
