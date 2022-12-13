@@ -11,15 +11,18 @@
 }
 
 #header a {
+    transition: 0.1s;
     display: block;
     color: var(--main-color);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 0.1em;
+    text-decoration-color: transparent;
     white-space: nowrap;
 }
 
 #header a:hover {
-    color: var(--main-color);
-    text-decoration: underline;
+    text-decoration-color: var(--main-color);
 }
 
 #header-logo {

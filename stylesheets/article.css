@@ -39,13 +39,14 @@
 }
 
 #toc-container a {
-    transition: 0s;
+    transition: 0.1s;
     font-size: 95%;
     color: var(--disabled-color);
+    text-decoration: none;
 }
 
 #toc-container a:hover {
-    color: var(--text);
+    color: var(--text-color);
     text-decoration: none;
 }
 
