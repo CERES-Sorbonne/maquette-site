@@ -52,7 +52,8 @@
 }
 
 *:focus {
-    outline: var(--hr-main);
+    outline: none;
+    border: var(--hr-main);
     background-color: rgba(var(--main), 0.2) !important;
 }
 
